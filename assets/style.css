@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    width: 100%;
+    height: 80px;
+    background-color: #34495e;
+}
+span{
+    font-size: 30px;
+    line-height: 80px;
+    margin-left: 100px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav ul{
+    float: right;
+    margin-right: 100px;
+}
+nav li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 8px;
+  
+}
+nav a{
+    color: #fff;
+   
+    font-size: 20px;
+    border: 1px solid transparent;
+    padding: 7px 10px;
+    border-radius: 3px;
+}
+a.active, a:hover{
+    border: 1px solid #fff;
+    transition: all 0.5s linear;
+}
+nav .icon-bar{
+    font-size: 25px;
+    color: #fff;
+    float: right;
+    margin-right: 40px;
+    line-height: 80px;
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 1170px) {
+    span{
+        font-size: 25px;
+    }
+    nav ul{
+        margin-right: 20px;
+    }
+    nav a{
+        font-size: 16px;
+    }
+}
+/*responsive mobile*/
+@media (max-width: 787px) {
+    span{
+        font-size: 20px;
+    }
+    nav .icon-bar{
+        display: block;
+    }
+    nav ul{
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #2f3640;
+        text-align: center;
+        transition: all .5s;
+    
+    }
+    nav li{
+        display: block;/*thẻ li nằm đứng*/
+        line-height: 30px;
+        margin: 50px 0;
+    }
+    a.active, a:hover{
+        border: none;
+        color: #3498db;
+    }
+    nav ul.show{ /*từ c sang jequyryho left -100%*/
+        left: 0;
+    }
+}   
